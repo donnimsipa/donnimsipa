@@ -1,7 +1,0 @@
-Service,Description,Standard
-Query,Search for DICOM objects (QIDO-RS),DICOM PS3.18 10.6
-Retrieve,Retrieve DICOM objects (WADO-RS),DICOM PS3.18 10.4
-,Retrievesingle DICOM instances (WADO-URI),DICOM PS3.18 9
-Store,Store DICOM objects (STOW-RS),DICOM PS3.18 10.5
-Worklist,Manage worklist items (UPS-RS),DICOM PS3.18 11
-Capabilities,	Discover available services,DICOM PS3.18 8.9

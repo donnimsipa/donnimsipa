@@ -1,7 +1,0 @@
-Layanan,Deskripsi,Standar
-Query,Mencari objek DICOM (QIDO-RS),DICOM PS3.18 10.6
-Retrieve,Mengambil objek DICOM (WADO-RS),DICOM PS3.18 10.4
-Mengambil instance DICOM tunggal (WADO-URI),DICOM PS3.18 9
-Store,Menyimpan objek DICOM (STOW-RS),DICOM PS3.18 10.5
-Worklist,Mengelola item worklist (UPS-RS),DICOM PS3.18 11
-Capabilities,Menemukan layanan yang tersedia,DICOM PS3.18 8.9

@@ -1,5 +1,0 @@
-DICOMweb,DIMSE,Description
-WADO-RS,C-GET,Retrieve DICOM objects from the server
-STOW-RS,C-STORE,Store DICOM objects to the server
-QIDO-RS,C-FIND,Search for DICOM objects based on specific criteria
-UPS-RS,N-ACTION,Manage worklist or workflow items on the server

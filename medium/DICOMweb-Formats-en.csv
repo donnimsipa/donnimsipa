@@ -1,3 +1,0 @@
-Model,Description,Standard
-JSON,Encodes any DICOM Data Set in JSON format,DICOM PS3.18 Appendix F
-XML,Encodes any DICOM Data Set in XML format,DICOM PS3.19 Appendix A.1
