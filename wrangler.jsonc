@@ -1,0 +1,10 @@
+{
+	"name": "donnimsipa",
+	"compatibility_date": "2025-09-30",
+	"vars": {
+		"ENVIRONMENT": "development"
+	},
+	"assets": {
+		"directory": "./.svelte-kit/cloudflare"
+	}
+}

@@ -1,0 +1,36 @@
+# {{ name }}
+
+**{{ headline }}**
+
+{{ about }}
+
+## Experience
+{% for e in experience -%}
+**{{ e.company }}** — *{{ e.role }}* ({{ e.period }})
+{% for b in e.bullets %}- {{ b }}
+{% endfor %}
+
+{% endfor %}
+
+## Projects
+{% for p in projects -%}
+- **{{ p.title }}**{% if p.link %} — {{ p.link }}{% endif %}{% if p.links %}{% for l in p.links %} — [{{ l.text }}]({{ l.url }}){% endfor %}{% endif %}{% if p.highlight %} — {{ p.highlight }}{% endif %}
+{% endfor %}
+
+## Skills
+**Healthcare IT**
+{% for s in skills.healthcare_it -%}- {{ s }}
+{% endfor %}
+
+**Software & Infrastructure**
+{% for s in skills.software_infra -%}- {{ s }}
+{% endfor %}
+
+## Certifications
+{% for c in certifications -%}- {{ c }}
+{% endfor %}
+
+## Contact
+- Email: {{ contact.email }}
+- LinkedIn: {{ contact.linkedin }}
+- Website: {{ contact.website }}

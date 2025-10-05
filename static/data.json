@@ -1,0 +1,74 @@
+{
+  "name": "Donni Maulana Sipa",
+  "headline": "Digital Healthcare Specialist — Healthcare IT & Software Development",
+  "about": "Bridging healthcare and technology through PACS/RIS development, hospital integration (FHIR/HL7/API/DB), and AI-driven medical imaging research.\n",
+  "experience": [
+    {
+      "company": "Enseval Medika Prima",
+      "role": "IT Healthcare Specialist",
+      "period": "Jul 2022 – Present",
+      "bullets": [
+        "Co-developed in-house PACS — Winner Kalbe Innovation Convention 2024",
+        "Led 35+ hospital integrations (FHIR, HL7, API, DB) as PIC integrator",
+        "Developed custom middleware for hospital interoperability",
+        "Contributed to Indonesia compliance (CPAKB, AKD, TKDN)"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "In-house PACS Development (2023 - Present)",
+      "highlight": "Award-winning; 4 deployments"
+    },
+    {
+      "title": "ANN for X-Ray Exposure Optimization (IMERI 2019)",
+      "link": "https://donnimsipa.my.id/ann-publication-4th-imeri-ui",
+      "highlight": "Presented at the 4th IMERI International Conference, Universitas Indonesia"
+    },
+    {
+      "title": "Mimo Certification Projects (Nov 2024)",
+      "links": [
+        {
+          "text": "Back End Developer",
+          "url": "https://donnimsipa.my.id/mimo-back-end-developer"
+        },
+        {
+          "text": "Front End Developer",
+          "url": "https://donnimsipa.my.id/mimo-front-end-developer"
+        },
+        {
+          "text": "Full Stack Development",
+          "url": "https://donnimsipa.my.id/mimo-full-stack-development"
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "healthcare_it": [
+      "PACS / MIMPS & RIS",
+      "DICOM",
+      "Hospital System Integration (FHIR/HL7/API/DB)",
+      "Regulatory: CPAKB / AKD / TKDN"
+    ],
+    "software_infra": [
+      "Full Stack Web Development",
+      "Linux, Windows, Windows Server, macOS",
+      "VMware, Proxmox, Microsoft Azure",
+      "Docker, Podman, Kubernetes",
+      "Database (SQL/NoSQL), API Development",
+      "SSH & CLI"
+    ]
+  },
+  "certifications": [
+    "Alibaba Cloud — Cloud Security (Oct 2024)",
+    "Inco Academy — Green Digital Skills (Apr 2024)",
+    "RevoU — Intro to Product Management (Jan 2024)",
+    "Mimo — Backend, Frontend & Full Stack Development (Nov 2024)"
+  ],
+  "contact": {
+    "email": "donni@donnimsipa.my.id",
+    "linkedin": "https://linkedin.com/in/donnimsipa",
+    "website": "https://donnimsipa.my.id"
+  },
+  "siteName": "Hi There !"
+}

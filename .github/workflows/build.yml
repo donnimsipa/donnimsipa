@@ -1,0 +1,81 @@
+name: Build README from YAML
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "data.yml"
+      - "templates/**"
+      - "build.py"
+  workflow_dispatch: {}
+
+concurrency:
+  group: build-from-yaml
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+env:
+  TZ: Asia/Jakarta
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps for builder
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml jinja2
+
+      - name: Run builder (YAML ➜ README, JSON)
+        run: |
+          python build.py
+          test -f public/data.json   || (echo "data.json not generated" && exit 1)
+
+      - name: Sync JSON for SSG (public ➜ site/public)
+        run: |
+          mkdir -p site/public
+          cp -f public/data.json site/public/data.json
+
+      - name: Commit generated artifacts
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md public/data.json site/public/data.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Auto-generate from data.yml (README + JSON)"
+          git push
+          echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Create version tag (vYYYY.MM.DD[.N])
+        if: steps.commit.outputs.changed == 'true'
+        id: tag
+        run: |
+          git fetch --tags origin
+          BASE_TAG="$(date +v%Y.%m.%d)"
+          TAG="$BASE_TAG"
+          N=1
+          while git rev-parse "$TAG" >/dev/null 2>&1; do
+            N=$((N+1))
+            TAG="${BASE_TAG}.${N}"
+          done
+          git tag -a "$TAG" -m "Content build from data.yml on $(date +%F %T %Z) (run $GITHUB_RUN_NUMBER)"
+          git push origin "$TAG"
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+          echo "Created tag: $TAG"

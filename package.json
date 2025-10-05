@@ -1,0 +1,39 @@
+{
+  "name": "donnimsipa",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite dev",
+    "start": "vite dev",
+    "build": "vite build",
+    "preview": "npm run build && wrangler dev",
+    "dev:cf": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy --env production",
+    "assets:generate": "pip install --break-system-packages -r requirements.txt && python3 build.py",
+    "predev": "npm run assets:generate && svelte-kit sync",
+    "prestart": "npm run assets:generate",
+    "prebuild": "npm run assets:generate",
+    "prepreview": "npm run assets:generate",
+    "predev:cf": "npm run assets:generate",
+    "precheck": "npm run assets:generate",
+    "postinstall": "svelte-kit sync",
+    "prepare": "svelte-kit sync",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+  },
+  "dependencies": {
+    "marked": "^16.3.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.13.10",
+    "@sveltejs/adapter-cloudflare": "^7.2.4",
+    "@sveltejs/kit": "^2.43.8",
+    "@tsconfig/svelte": "^5.0.5",
+    "svelte": "^5.39.8",
+    "svelte-check": "^4.3.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "unocss": "^66.5.2",
+    "vite": "^7.1.9",
+    "wrangler": "^4.42.0"
+  }
+}
