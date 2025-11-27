@@ -3,7 +3,7 @@
   import '../app.css';
 
   export let data;
-  const siteName = data.meta?.siteName || 'Portfolio';
+  const siteName = data.meta?.siteNavbar || 'Portfolio';
 
   let dark = true;
   const baseToggleClasses =

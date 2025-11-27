@@ -28,6 +28,7 @@ export type SiteSkills = Record<string, string[]>;
 export interface SiteData {
   name: string;
   siteName?: string;
+  siteNavbar?: string;
   headline: string;
   about: string;
   experience: SiteExperience[];

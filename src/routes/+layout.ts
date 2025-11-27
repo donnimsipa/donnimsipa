@@ -12,12 +12,14 @@ export async function load({ fetch }) {
   const title = `${meta.name} — ${meta.headline}`;
   const description = typeof meta.about === 'string' ? meta.about.slice(0, 180) : '';
   const siteName = meta.siteName ?? meta.name;
+  const siteNavbar = meta.siteNavbar ?? meta.name;
   const name = meta.name;
   return {
     meta: {
       title,
       description,
       siteName,
+      siteNavbar,
       name
     }
   };

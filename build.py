@@ -40,6 +40,7 @@ payload = {
     "contact": DATA.get("contact", {}),
 }
 payload["siteName"] = DATA.get("site_name") or DATA.get("siteName") or DATA.get("name")
+payload["siteNavbar"] = DATA.get("site_navbar") or DATA.get("siteNavbar") or payload["siteName"]
 with open(os.path.join(PUBLIC, "data.json"), "w", encoding="utf-8") as f:
     json.dump(payload, f, ensure_ascii=False, indent=2)
 shutil.copyfile(os.path.join(PUBLIC, "data.json"), os.path.join(STATIC, "data.json"))
