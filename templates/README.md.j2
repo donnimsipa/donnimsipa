@@ -13,8 +13,8 @@
 {% endfor %}
 
 ## Projects
-{% for p in projects -%}
-- **{{ p.title }}**{% if p.link %} — {{ p.link }}{% endif %}{% if p.links %}{% for l in p.links %} — [{{ l.text }}]({{ l.url }}){% endfor %}{% endif %}{% if p.highlight %} — {{ p.highlight }}{% endif %}
+{% for p in projects %}
+- **{{ p.title }}**{% if p.link %} — {{ p.link }}{% endif %}{% if p.links %}{% for l in p.links %} — [{{ l.text }}]({{ l.url }}){% endfor %}{% endif %}{% if p.highlight %} — {{ p.highlight }}{% endif %}{{ "\n" }}
 {% endfor %}
 
 ## Skills

@@ -1,7 +1,7 @@
 {
   "name": "Donni Maulana Sipa",
   "headline": "Digital Healthcare Specialist — Healthcare IT & Software Development",
-  "about": "Bridging healthcare and technology through MIMPS (PACS) and RIS development, hospital integration (FHIR/HL7/API/DB), and AI‑driven research to improve medical imaging analysis and clinical workflows.\n",
+  "about": "Bridging healthcare and technology through MIMPS (PACS) with RIS, hospital integration (FHIR/HL7/API/DB), and AI‑driven research in medical imaging analysis and clinical workflows.\n",
   "experience": [
     {
       "company": "Enseval Medika Prima",
@@ -18,7 +18,7 @@
   "projects": [
     {
       "title": "In-house MIMPS (PACS) Development (2023 - Present)",
-      "highlight": "Turned a near‑failure launch by quickly identifying and optimizing a heavy query that was overloading the server."
+      "highlight": "Turned a near‑failure launch by identifying and optimizing a heavy query that was overloading the server."
     },
     {
       "title": "Mimo Certification Projects (Nov 2024)",
@@ -54,13 +54,11 @@
     "software_infra": [
       "Golang",
       "React/Svelte/Vue",
-      "Full Stack Web Development",
       "Linux, Windows, macOS",
       "VMware, Proxmox, Azure",
       "Docker, Podman, Kubernetes",
       "Database (SQL/NoSQL)",
-      "Supabase/Pocketbase/Trailbase/BKND",
-      "API Development"
+      "Supabase/Pocketbase/Trailbase/BKND"
     ]
   },
   "certifications": [
@@ -75,5 +73,5 @@
     "website": "https://donnimsipa.my.id"
   },
   "siteName": "About Donni Maulana Sipa",
-  "siteNavbar": "Halo There!"
+  "siteNavbar": "Hello There!"
 }

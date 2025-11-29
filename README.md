@@ -2,7 +2,7 @@
 
 **Digital Healthcare Specialist — Healthcare IT & Software Development**
 
-Bridging healthcare and technology through MIMPS (PACS) and RIS development, hospital integration (FHIR/HL7/API/DB), and AI‑driven research to improve medical imaging analysis and clinical workflows.
+Bridging healthcare and technology through MIMPS (PACS) with RIS, hospital integration (FHIR/HL7/API/DB), and AI‑driven research in medical imaging analysis and clinical workflows.
 
 
 ## Experience
@@ -14,7 +14,13 @@ Bridging healthcare and technology through MIMPS (PACS) and RIS development, hos
 
 
 ## Projects
-- **In-house MIMPS (PACS) Development (2023 - Present)** — Turned a near‑failure launch by quickly identifying and optimizing a heavy query that was overloading the server.- **Mimo Certification Projects (Nov 2024)** — [Back End Developer](https://donnimsipa.my.id/mimo-be) — [Front End Developer](https://donnimsipa.my.id/mimo-fe) — [Full Stack Development](https://donnimsipa.my.id/mimo-fs)- **ANN for X-Ray Exposure Optimization (IMERI 2019)** — https://donnimsipa.my.id/ann-publication-4th-imeri-ui — Developed an AI‑driven tool that predicts optimal X‑ray exposure settings for thoracic imaging
+- **In-house MIMPS (PACS) Development (2023 - Present)** — Turned a near‑failure launch by identifying and optimizing a heavy query that was overloading the server.
+
+- **Mimo Certification Projects (Nov 2024)** — [Back End Developer](https://donnimsipa.my.id/mimo-be) — [Front End Developer](https://donnimsipa.my.id/mimo-fe) — [Full Stack Development](https://donnimsipa.my.id/mimo-fs)
+
+- **ANN for X-Ray Exposure Optimization (IMERI 2019)** — https://donnimsipa.my.id/ann-publication-4th-imeri-ui — Developed an AI‑driven tool that predicts optimal X‑ray exposure settings for thoracic imaging
+
+
 ## Skills
 **Healthcare IT**
 - MIMPS (PACS)
@@ -26,13 +32,11 @@ Bridging healthcare and technology through MIMPS (PACS) and RIS development, hos
 **Software & Infrastructure**
 - Golang
 - React/Svelte/Vue
-- Full Stack Web Development
 - Linux, Windows, macOS
 - VMware, Proxmox, Azure
 - Docker, Podman, Kubernetes
 - Database (SQL/NoSQL)
 - Supabase/Pocketbase/Trailbase/BKND
-- API Development
 
 ## Certifications
 - TÜV NORD Indonesia — Awareness ISO 62304 (Oct 2025) – Medical software safety awareness
