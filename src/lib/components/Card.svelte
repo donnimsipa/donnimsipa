@@ -1,17 +1,23 @@
 <script lang="ts">
-  import { marked } from 'marked';
+  import { marked } from "marked";
 
-  export let title: string;
-  export let body: string | null = null;
-  export let done: boolean | null = false;
+  let {
+    title,
+    body = null,
+    done = false,
+  }: {
+    title: string;
+    body?: string | null;
+    done?: boolean | null;
+  } = $props();
 
-  $: htmlBody = marked.parse(body ?? '');
+  const htmlBody = $derived(marked.parse(body ?? ""));
 </script>
 
-<li class="link-card" data-done={done ? '' : undefined}>
+<li class="link-card" data-done={done ? "" : undefined}>
   <div class="inner">
     <div class="check">
-      <span>{done ? '✅' : '🔘'}</span>
+      <span>{done ? "✅" : "🔘"}</span>
     </div>
     <h2>{title}</h2>
     <div class="content">{@html htmlBody}</div>

@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.13.10",
+    "@iconify-json/lucide": "^1.2.93",
     "@sveltejs/adapter-cloudflare": "^7.2.4",
     "@sveltejs/kit": "^2.43.8",
     "@tsconfig/svelte": "^5.0.5",

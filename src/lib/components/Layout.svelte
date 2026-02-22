@@ -1,6 +1,15 @@
 <script lang="ts">
-  export let title: string;
-  export let fullWidth = false;
+  import type { Snippet } from "svelte";
+
+  let {
+    title,
+    fullWidth = false,
+    children,
+  }: {
+    title: string;
+    fullWidth?: boolean;
+    children: Snippet;
+  } = $props();
 </script>
 
 <svelte:head>
@@ -10,12 +19,12 @@
 <main class="w-full">
   {#if fullWidth}
     <div class="w-full overflow-x-hidden">
-      <slot />
+      {@render children()}
     </div>
   {:else}
     <div class="page-container py-8 md:py-12">
-      <div class="card p-0 sm:p-6 md:p-8 lg:p-10">
-        <slot />
+      <div class="glass-card p-0 sm:p-6 md:p-8 lg:p-10">
+        {@render children()}
       </div>
     </div>
   {/if}
