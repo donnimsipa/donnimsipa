@@ -1,0 +1,97 @@
+{
+  "name": "Donni Maulana Sipa",
+  "headline": "Building the digital infrastructure that powers modern healthcare.",
+  "about": "Focused on scaling resilient healthcare infrastructure using Golang, Kubernetes, and AI-driven automation (n8n, OpenClaw). By dismantling legacy \"black boxes\" and implementing robust REST/HL7/FHIR interoperability, I’ve delivered 70% in internal cost savings while ensuring zero-downtime for mission-critical data—powering modern healthcare at the speed of code.\n",
+  "about_tagline": "Engineering the intersection of clinical excellence and production-grade code",
+  "sections": {
+    "portfolio": "Portfolio",
+    "download_cv": "Download CV",
+    "about": "About",
+    "experience": "Experience",
+    "case_studies": "Technical Case Studies",
+    "case_studies_headline": "Case Studies & Engineering",
+    "case_studies_description": "Technical deep dives into production-grade systems, backend architecture, and real-world integration challenges.",
+    "back_to_case_studies": "Back to All Case Studies",
+    "view_portfolio": "View Full Portfolio",
+    "projects": "Projects & Collaborations",
+    "skills": "Skills",
+    "certifications": "Certifications"
+  },
+  "experience": [
+    {
+      "company": "Enseval Medika Prima",
+      "role": "IT Healthcare Specialist",
+      "period": "Jul 2022 – Present",
+      "bullets": [
+        "Won Kalbe Innovation Convention 2024 by co-developing in-house RIS and MIMPS (PACS), cutting external vendor dependency and saving company 70% on foreign licensing costs.",
+        "Led 35+ hospital integrations, implementing FHIR/HL7/API/DB connectivity to enable interoperable imaging workflows for 10,000+ studies per month."
+      ]
+    },
+    {
+      "company": "Masmitra Hospital",
+      "role": "Officer",
+      "period": "Dec 2021 - May 2022",
+      "bullets": [
+        "Increased front-office registration throughput by 30% through the redesign of patient enrollment workflows and optimized HIS implementation.",
+        "Standardized department-wide registration practices by authoring internal HIS manuals and SOPs, resulting in a 40% reduction in patient data entry errors."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Mimo Software Developer Certification Projects (Nov 2024)",
+      "links": [
+        {
+          "text": "Back End Developer",
+          "url": "https://donnimsipa.my.id/mimo-be"
+        },
+        {
+          "text": "Front End Developer",
+          "url": "https://donnimsipa.my.id/mimo-fe"
+        },
+        {
+          "text": "Full Stack Development",
+          "url": "https://donnimsipa.my.id/mimo-fs"
+        }
+      ]
+    },
+    {
+      "title": "ANN for X-Ray Exposure Optimization (IMERI 2019)",
+      "link": "https://donnimsipa.my.id/ann-publication-4th-imeri-ui",
+      "highlight": "Developed an AI‑driven tool that predicts optimal X‑ray exposure settings for thoracic imaging"
+    }
+  ],
+  "skills": [
+    "System Integration",
+    "Virtualization",
+    "Container",
+    "Database",
+    "Cloud",
+    "Golang",
+    "React",
+    "Svelte",
+    "Vue"
+  ],
+  "certifications": [
+    {
+      "title": "TÜV NORD Indonesia — Awareness ISO 62304 (Oct 2025) – Medical software safety awareness",
+      "image": "/cert-tuv.jpg"
+    },
+    {
+      "title": "Alibaba Cloud — Cloud Security (Oct 2024) – Secure cloud infrastructure fundamentals",
+      "image": "/cert-alibaba.png"
+    },
+    {
+      "title": "Inco Academy — Green Digital Skills (Apr 2024) – Eco‑friendly tech competency training",
+      "image": "/cert-inco.png"
+    }
+  ],
+  "contact": {
+    "email": "donni@donnimsipa.my.id",
+    "linkedin": "https://linkedin.com/in/donnimsipa",
+    "website": "https://donnimsipa.my.id"
+  },
+  "siteName": "About Donni Maulana Sipa",
+  "siteNavbar": "DMS // Portfolio",
+  "siteUrl": "https://about.donnimsipa.my.id"
+}

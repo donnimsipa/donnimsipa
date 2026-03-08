@@ -1,0 +1,89 @@
+name: Build Assets from YAML
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "src/content/site.yml"
+      - "scripts/templates/**"
+      - "scripts/build.py"
+  workflow_dispatch: {}
+
+concurrency:
+  group: build-from-yaml
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+env:
+  TZ: Asia/Jakarta
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install system dependencies for WeasyPrint
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libpango-1.0-0 \
+            libharfbuzz0b \
+            libpangoft2-1.0-0 \
+            libpangocairo-1.0-0 \
+            libcairo2 \
+            libgdk-pixbuf2.0-0 \
+            libffi-dev \
+            shared-mime-info
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements.txt
+
+      - name: Run builder (YAML ➜ README, JSON, PDF)
+        run: |
+          python3 scripts/build.py
+          test -f static/site.json || (echo "site.json not generated" && exit 1)
+          test -f static/cv.pdf   || (echo "cv.pdf not generated" && exit 1)
+
+      - name: Commit generated artifacts
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md static/site.json static/cv.pdf
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Auto-generate assets from site.yml (README, JSON, PDF)"
+          git push
+          echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Create version tag (vYYYY.MM.DD[.N])
+        if: steps.commit.outputs.changed == 'true'
+        id: tag
+        run: |
+          git fetch --tags origin
+          BASE_TAG="$(date +v%Y.%m.%d)"
+          TAG="$BASE_TAG"
+          N=1
+          while git rev-parse "$TAG" >/dev/null 2>&1; do
+            N=$((N+1))
+            TAG="${BASE_TAG}.${N}"
+          done
+          git tag -a "$TAG" -m "Content build on $(date +%F %T %Z)"
+          git push origin "$TAG"
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
