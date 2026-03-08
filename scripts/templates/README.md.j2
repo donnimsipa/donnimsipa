@@ -1,0 +1,37 @@
+# {{ name }}
+
+**{{ headline }}**
+
+{{ about }}
+
+## {{ sections.experience if sections.experience else "Experience" }}
+{% for e in experience -%}
+**{{ e.role }}** at *{{ e.company }}* ({{ e.period }})
+{% for b in e.bullets %}- {{ b }}
+{% endfor %}
+
+{% endfor %}
+
+## {{ sections.projects if sections.projects else "Projects" }}
+{% for p in projects %}
+- **{{ p.title }}**{% if p.link %} — [{{ p.link }}]({{ p.link }}){% endif %}{% if p.links %}{% for l in p.links %} — [{{ l.text }}]({{ l.url }}){% endfor %}{% endif %}{% if p.highlight %} — {{ p.highlight }}{% endif %}{{ "\n" }}
+{% endfor %}
+
+> [!TIP]
+> **Visit my {{ (sections.case_studies if sections.case_studies else "Case Studies") }} at [{{ site_url }}/case-studies]({{ site_url }}/case-studies)**
+
+
+## {{ sections.skills if sections.skills else "Skills" }}
+{% for s in skills -%}- {{ s }}
+{% endfor %}
+
+## {{ sections.certifications if sections.certifications else "Certifications" }}
+{% for c in certifications %}
+- {% if c.image %}[**{{ c.title }}**]({% if c.image.startswith('http') or c.image.startswith('//') %}{{ c.image }}{% else %}{{ site_url }}{{ c.image }}{% endif %}){% else %}**{{ c.title }}**{% endif %}
+
+{% endfor %}
+
+## Contact
+- Email: {{ contact.email }}
+- LinkedIn: {{ contact.linkedin }}
+- Website: {{ contact.website }}
